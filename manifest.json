@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Better Novius",
+    "version": "1.0",
+    "description": "Chrome extension that injects JS and CSS for Novius",
+    "content_scripts": [
+        {
+            "matches": ["https://sx167.sxondemand.fr/sx167/xLogin"],
+            "js": ["login.js"],
+            "run_at": "document_idle" // Essayer document_end
+        }
+    ],
+    "permissions": []
+}
