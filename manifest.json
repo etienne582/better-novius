@@ -1,14 +1,26 @@
 {
     "manifest_version": 3,
     "name": "Better Novius",
-    "version": "1.0",
+    "version": "0.0.1",
     "description": "Chrome extension that injects JS and CSS for Novius",
+    "options_page": "options/options.html",
     "content_scripts": [
         {
             "matches": ["https://sx167.sxondemand.fr/sx167/xLogin"],
-            "js": ["login.js"],
-            "run_at": "document_idle" // Essayer document_end
+            "js": ["login/login.js"],
+            "run_at": "document_end"
+        },
+        {
+            "matches": ["https://sx167.sxondemand.fr/sx167/x?aif_comp=com.apsylis.asa.utl.home.NXFrame*"],
+            "js": ["timesheet/timesheet.js"],
+            "run_at": "document_idle"
         }
     ],
-    "permissions": []
+    "web_accessible_resources": [
+        {
+            "resources": ["timesheet/timesheet.css"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "permissions": ["storage"]
 }
