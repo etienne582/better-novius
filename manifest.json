@@ -19,7 +19,7 @@
     "web_accessible_resources": [
         {
             "resources": ["timesheet/timesheet.css"],
-            "matches": ["<all_urls>"]
+            "matches": ["https://sx167.sxondemand.fr/*"]
         }
     ],
     "permissions": ["storage"]
