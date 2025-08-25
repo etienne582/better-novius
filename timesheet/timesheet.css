@@ -1,10 +1,5 @@
-body {
-    background-color: green !important;
-}
-
 /* Cache les weekends */
-/* Enlever les td enlève également dans les sous tableaux grrr */
-form[name="right"] > center > table.stdlist.noborder tr > th:nth-last-child(1),
-form[name="right"] > center > table.stdlist.noborder tr > th:nth-last-child(2) {
+form[name="right"] > center > table.stdlist.noborder > tbody > tr > th:nth-child(n + 6),
+form[name="right"] > center > table.stdlist.noborder > tbody > tr > td:nth-child(n + 6) {
     display: none !important;
 }
