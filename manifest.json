@@ -12,13 +12,13 @@
         },
         {
             "matches": ["https://sx167.sxondemand.fr/sx167/x?aif_comp=com.apsylis.asa.utl.home.NXFrame*"],
-            "js": ["timesheet/timesheet.js"],
+            "js": ["main.js", "injector.js"],
             "run_at": "document_idle"
         }
     ],
     "web_accessible_resources": [
         {
-            "resources": ["timesheet/timesheet.css"],
+            "resources": ["timesheet/timesheet.js", "timesheet/timesheet.css"],
             "matches": ["https://sx167.sxondemand.fr/*"]
         }
     ],
