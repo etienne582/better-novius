@@ -8,3 +8,8 @@ form[name="right"] > center > table.stdlist.noborder > tbody > tr > td:nth-child
 .x-layout-split {
     background-color: #444444 !important;
 }
+
+/* Barre de scoll en bas des lignes d'affaire */
+#ext-gen22 {
+    overflow-x: hidden !important;
+}
