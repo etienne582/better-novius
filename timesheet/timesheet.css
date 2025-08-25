@@ -3,3 +3,8 @@ form[name="right"] > center > table.stdlist.noborder > tbody > tr > th:nth-child
 form[name="right"] > center > table.stdlist.noborder > tbody > tr > td:nth-child(n + 6) {
     display: none !important;
 }
+
+/* Slider entre la partie gauche et droite du tableau de la couleur de fond */
+.x-layout-split {
+    background-color: #444444 !important;
+}
