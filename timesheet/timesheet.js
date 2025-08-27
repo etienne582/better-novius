@@ -28,7 +28,7 @@ function addButtonContainer(target) {
     return container;
 }
 
-document.querySelectorAll("input.number-green").forEach(el => {
+document.querySelectorAll('input[name^="total_days_" i]').forEach((el) => {
     const parentTd = el.closest("td");
     // Mettre du flex sur le parent
     if (parentTd) {
