@@ -59,6 +59,29 @@ function callbackFillWeekButton(parentTd) {
 }
 
 /**
+ * Copy validation buttons
+ */
+function addValidationButtonsToTop() {
+    const sourceButtons = document.querySelectorAll('.x-panel-footer button[type="button"]');
+    const newButtons = Array.from(sourceButtons).map(sourceButton => {
+        const cloneButton = sourceButton.cloneNode(true);
+        cloneButton.classList.add("beautiful-btn");
+        cloneButton.addEventListener("click", () => sourceButton.click());
+        return cloneButton;
+    });
+    const targetContainer = document.querySelector('form[name="top"]>div:last-of-type');
+    if (targetContainer) {
+        targetContainer.classList.add("top-container");
+        const buttonContainer = document.createElement("div");
+
+        buttonContainer.className = "top-button-container";
+        newButtons.forEach(button => buttonContainer.appendChild(button));
+
+        targetContainer.appendChild(buttonContainer);
+    }
+}
+
+/**
  * Add custom buttons to each line
  */
 document.querySelectorAll('input[name^="total_days_" i]').forEach(el => {
@@ -69,3 +92,6 @@ document.querySelectorAll('input[name^="total_days_" i]').forEach(el => {
         addIcon(iconContainer, "fa-calendar-check", "Remplir la semaine", () => callbackFillWeekButton(parentTd));
     }
 });
+
+// Copy validation buttons
+addValidationButtonsToTop();

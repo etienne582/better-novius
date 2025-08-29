@@ -13,3 +13,44 @@ form[name="right"] > center > table.stdlist.noborder > tbody > tr > td:nth-child
 #ext-gen22 {
     overflow-x: hidden !important;
 }
+
+.top-container,
+.top-button-container {
+    display: flex;
+    gap: 6px;
+}
+
+/* ---------- GPT -------------- */
+button.beautiful-btn {
+    color: white; /* White text */
+    padding: 10px 20px; /* Spacing inside */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background 0.3s, transform 0.2s;
+}
+
+button.beautiful-btn:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* First button = Update */
+button.beautiful-btn:nth-of-type(1) {
+    background-color: #007bff; /* Blue */
+}
+
+button.beautiful-btn:nth-of-type(1):hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Small lift */
+}
+
+/* Second button = Submit */
+button.beautiful-btn:nth-of-type(2) {
+    background-color: #28a745; /* Green */
+}
+
+button.beautiful-btn:nth-of-type(2):hover {
+    background-color: #1e7e34;
+    transform: translateY(-2px); /* Small lift */
+}
