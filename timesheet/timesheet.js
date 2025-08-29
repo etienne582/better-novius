@@ -53,7 +53,9 @@ function callbackFillWeekButton(parentTd) {
     );
     // 8.0 On all working days
     selectsOfWeek.forEach(select => (select.value = "8.0"));
-    // TODO: trigger le bouton update
+    // Click the update button
+    const updateButton = document.querySelector('.x-panel-footer button[type="button"]');
+    updateButton.click();
 }
 
 /**
