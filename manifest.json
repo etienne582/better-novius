@@ -22,5 +22,10 @@
             "matches": ["https://sx167.sxondemand.fr/*"]
         }
     ],
-    "permissions": ["storage"]
+    "permissions": ["storage"],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "betternovius@flix.dev"
+        }
+    }
 }
