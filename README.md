@@ -28,8 +28,13 @@ This extension injects custom JavaScript and CSS into **Everwin SX** to improve 
     - Select the folder where your extension files are located (the root with `manifest.json`)
 
 5. **Verify**
+
     - Your extension should now appear in the extensions list
     - If there are errors, click “Errors” under your extension to see what needs fixing
+
+## Configuration
+
+-   In the option page of the extension set your user email
 
 ---
 
