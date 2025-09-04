@@ -4,6 +4,6 @@ const resources = {
     css: [chrome.runtime.getURL("timesheet/timesheet.css")]
 };
 
-// Also observe future iframes being added dynamically
+// Observe iframes being added dynamically
 const observer = new MutationObserver(() => window.injector.injectIntoIframes(resources));
 observer.observe(document.body, { childList: true, subtree: true });

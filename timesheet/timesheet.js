@@ -81,17 +81,18 @@ function addValidationButtonsToTop() {
     }
 }
 
-/**
- * Add custom buttons to each line
- */
-document.querySelectorAll('input[name^="total_days_" i]').forEach(el => {
-    const parentTd = el.closest("td");
-    if (parentTd) {
-        const iconContainer = addButtonContainer(parentTd);
-        addIcon(iconContainer, "fa-copy", "Copier le code du projet", () => callbackCopyButton(parentTd));
-        addIcon(iconContainer, "fa-calendar-check", "Remplir la semaine", () => callbackFillWeekButton(parentTd));
-    }
-});
+// Needed when iframe is refreshed
+setTimeout(() => {
+    // Add custom buttons to each line
+    document.querySelectorAll('input[name^="total_days_" i]').forEach(el => {
+        const parentTd = el.closest("td");
+        if (parentTd) {
+            const iconContainer = addButtonContainer(parentTd);
+            addIcon(iconContainer, "fa-copy", "Copier le code du projet", () => callbackCopyButton(parentTd));
+            addIcon(iconContainer, "fa-calendar-check", "Remplir la semaine", () => callbackFillWeekButton(parentTd));
+        }
+    });
 
-// Copy validation buttons
-addValidationButtonsToTop();
+    // Copy validation buttons
+    addValidationButtonsToTop();
+}, 1);

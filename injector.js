@@ -24,7 +24,7 @@ function injectResources(doc, resources = { css: [], js: [] }) {
 
 // Inject into all iframes after they load
 function injectIntoIframes(resources = { css: [], js: [] }) {
-    document.querySelectorAll("iframe").forEach(iframe => {
+    document.querySelectorAll("iframe#main").forEach(iframe => {
         try {
             const doc = iframe.contentDocument || iframe.contentWindow.document;
             if (doc) {
